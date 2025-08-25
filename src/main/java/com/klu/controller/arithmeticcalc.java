@@ -13,17 +13,17 @@ public class arithmeticcalc {
 
     @GetMapping("add/{A}/{B}")
     public String add(@PathVariable("A") int a, @PathVariable("B") int b) {
-        return "Addition = " + (a + b);
+        return (a + b);
     }
 
     @GetMapping("sub/{A}/{B}")
     public String sub(@PathVariable("A") int a, @PathVariable("B") int b) {
-        return "Subtraction = " + (a - b);
+        return (a - b);
     }
 
     @GetMapping("mul/{A}/{B}")
     public String mul(@PathVariable("A") int a, @PathVariable("B") int b) {
-        return "Multiplication = " + (a * b);
+        return (a * b);
     }
 
     @GetMapping("div/{A}/{B}")
@@ -32,6 +32,6 @@ public class arithmeticcalc {
             return "Error: Division by zero is not allowed!";
         }
         double result = (double) a / b;
-        return "Division = " + result;
+        return result;
     }
 }
